@@ -1,0 +1,30 @@
+body {
+    background-image: url("/img/photo2.jpeg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 0;
+    margin: 0;
+    font-family: 'Ultra', serif;
+  }
+
+  h1 {
+    /* font-family: 'Ultra', serif; */
+    font-size: 110px;
+    text-align: center;
+    text-shadow: beige;
+    color: #E5421F ;
+  }
+
+  p {
+      color: white;
+      text-align: center; 
+}
+
+.container {
+  text-align: center;
+}

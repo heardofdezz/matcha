@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Matcha</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+             <a class="<%= path === '/user/swipe' ? 'active' : '' %>" href="/user/swipe"> <img src="/img/swipe.svg" alt="Swipe"> SWIPE </a>
+            </li>
+            <li class="nav-item">
+              <a class="<%= path === '/user/chat' ? 'active' : '' %>" href="/user/chat"><img src="/img/message-circle.svg" alt="Chat"> MESSAGES</a>
+            </li>
+            <li class="nav-item">
+                    <a class="<%= path === '/user/liked' ? 'active' : '' %>" href="/user/liked"><img src="/img/eye.svg" alt="Admirers"> ADMIRERS </a>
+            </li>
+            <li class="nav-item">
+                    <a class="<%= path === '/user/matched' ? 'active' : '' %>" href="/user/matched"><img src="/img/heart.svg" alt="Matched"> MATCHED</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="<%= path === '/user/profile' ? 'active' : '' %>" href="/user/profile"><img src="/img/profile.svg" alt="Profile"> PROFILE</a>
+            </li>       
+          </ul>
+        </div>  
+      </nav>

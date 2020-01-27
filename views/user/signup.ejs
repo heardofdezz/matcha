@@ -1,0 +1,127 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/signup" method="POST">
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="first-name">First Name:</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="lastname">Last Name :</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="username">Username :</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="username" name="username" placeholder="Your Username..">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="password">Password :</label>
+            </div>
+            <div class="col-75">
+              <input type="password" id="password" name="password" placeholder="Your password..">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="bday">Birthday :</label>
+            </div>
+            <div class="col-75">
+              <input type="date" name="bday"> 
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-25">
+            
+            </div>
+            <div class="col-75">
+              <input type="password" id="password2" name="password2" placeholder="Type again your password..">
+            </div>
+          </div>  
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="email">Email :</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="email" name="email" placeholder="Your email address..">
+            </div>
+          </div>
+          
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="gender">Gender</label>
+            </div>
+            <div class="col-75">
+              <select id="gender" name="gender">
+                <option value="...">...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+       
+      
+          <div class="row">
+            <div class="col-25">
+              <label for="sexuality">Looking for : </label>
+            </div>
+            <div class="col-75">
+              <select id="sexuality" name="sexuality">
+                 <option value="...">...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="both">Both</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+       
+       
+          <div class="row">
+            <div class="col-25">
+              <label for="interests"> Interests :</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="interests" name="interests" placeholder="#football, #makeup, #skydiving, #videogames">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="bio">Bio :</label>
+            </div>
+            <div class="col-75">
+              <textarea id="bio" name="bio" placeholder="Write a short bio.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+      
+<%- include('../includes/end.ejs') %>
