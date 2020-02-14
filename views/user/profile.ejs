@@ -1,9 +1,129 @@
 <%- include('../includes/head.ejs') %>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/signup.css">
+<link rel="stylesheet" href="/css/forms.css">
+<link rel="stylesheet" href="/css/usercard.css" />
 </head>
 
 <body>
-    <%- include('../includes/navigation.ejs') %>
-   <h1> Profile PAGE </h1>
+	<%- include('../includes/navigation.ejs') %>
+	<div class="container">
+		<div id="infos_panel">
+			<div class="row">
+				<div class="col-25">
+					<label for="first-name">First Name :</label>
+				</div>
+				<div class="col-75">
+					<p type="text" id="firstname" name="firstname"> <%= user.firstname %> </p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="lastname">Last Name :</label>
+				</div>
+				<div class="col-75">
+					<p type="text" id="lastname" name="lastname"> <%= user.lastname %>  </p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="username">Username :</label>
+				</div>
+				<div class="col-75">
+					<p type="text" id="username" name="username"> <%= user.username %> </p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="bday">Birthday :</label>
+				</div>
+				<div class="col-75">
+					<p id="bday" name="bday"> <%= user.birthdate %> </p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="email">Email :</label>
+				</div>
+				<div class="col-75">
+					<p type="text" id="email" name="email"><%=user.email %> </p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="bio">Bio :</label>
+				</div>
+				<div class="col-75">
+					<p type="text" id="bio" name="bio"><%=user.bio %> </p>
+				</div>
+			</div>
 
-<%- include('../includes/end.ejs') %>
+			<div class="row">
+					<div class="col-25">
+						<label for="interests">Interests :</label>
+					</div>
+					<div class="col-75">
+						<p type="text" id="interests" name="interests"><%=user.interests %> </p>
+					</div>
+				</div>
+
+				<div class="row">
+						<div class="col-25">
+							<label for="gender">Gender :</label>
+						</div>
+						<div class="col-75">
+							<p type="text" id="gender" name="gender"><%=user.gender %> </p>
+						</div>
+					</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="sexuality">Looking for :</label>
+				</div>
+				<div class="col-75">
+					<p type="text" id="sexuality" name="sexuality"><%=user.sexuality %> </p>
+				</div>
+			</div>
+		</div>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin:auto;">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<% for (var i = 1; i < nbrofimage;i++) { %>
+						<li data-target="#myCarousel" data-slide-to="<%=i%>"></li>
+					<% } %>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="/uploads/photo[<%= user.user_id %>]_[0].jpeg" style="width:100%;">
+				</div> 
+				<% for (var p = 1; p < nbrofimage;p++) { %>
+					<div class="item">
+						<img src="/uploads/photo[<%= user.user_id %>]_[<%= p %>].jpeg" style="width:100%;">
+					</div>
+				<% } %>
+				</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<div id="edit">
+					<a href="/user/edit-profile"><input type="submit" value="Edit" /></a><br/><br/>
+					<a href="/premium"> Pay For a Premium Account!</a><br />
+					<a href="/user/loginfo"> Edit login informations</a>
+				</div>
+			</div>
+		<%- include('../includes/end.ejs') %>

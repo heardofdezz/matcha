@@ -1,0 +1,38 @@
+a:link, a:visited, a:hover, a:active{
+	text-decoration: none;
+	color:black;
+}
+#card_profil{
+	position:relative;
+	width:300px;
+	height:400px;
+	background-color: rgb(65, 57, 150);
+	border: 2px black solid;
+}
+#name{
+	position:relative;
+	text-align: center;
+}
+#img{
+	position:relative;
+	left:15%;
+	width:70%;
+	height:40%;
+	border:1px black solid;
+}
+#hash{
+	position:relative;
+	text-align: center;
+	width:80%;
+	top:10%;
+	left:10%;
+	border:1px black solid;
+}
+#bio{
+	position:relative;
+	border:1px black solid;
+	width:80%;
+	top:20%;
+	left:10%;
+	text-align: center;
+}

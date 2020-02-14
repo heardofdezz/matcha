@@ -4,6 +4,30 @@
 
 <body>
     <%- include('../includes/navigation.ejs') %>
-   <h1> MESSAGING PAGE </h1>
+    <div class="columns">
+        <div class="column is-9">
+            <h1 class='pres'>Welcome <%=u1%>, chat with <%=u2%></h1>
+            <br />
+            <div class="user-messages">
+                <% for(var i=0; i<user.length; i++) {%>
+                <div id='card_profil'>
+                    <div id='bio'><% if (user[i].userFrom == id1){ %>
+                            <%=u1%>
+                            <% }else{ %>
+                            <%=u2%>
+                            <% } %>
+                        :   <%= user[i].content %></div>
+                </div>
+                <% } %>
+            </div>
 
-<%- include('../includes/end.ejs') %>
+
+
+            <input id="chat-input" type="text" name="message" placeholder="Your message">
+            <button id="chat-submit" class="button">Send</button>
+
+
+        </div>
+    </div>
+
+    <%- include('../includes/end.ejs') %>

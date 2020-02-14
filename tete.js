@@ -1020,7 +1020,7 @@ function sorttable(tab){
 		var i = 0;
 		while (i < tab.length - 1)
 		{
-			if (tab[i + 1].recherche > tab[i].recherche)
+			if (tab[i + 1].id > tab[i].id)
 			{
 				tmp = tab[i];
 				tab[i] = tab[i + 1];

@@ -1,24 +1,17 @@
 <%- include('../includes/head.ejs') %>
 <link rel="stylesheet" href="/css/index.css">
 </head>
-<header>
-    <div class="main-container">
-        <h1> Matcha </h1>
-        <p>A DATING WEBSITE SPONSORED BY ÉCOLE 42_PARIS</p><br>
-    </div>
-    <div class="secondary-container">
-        <a href="/login">
-                <button type="button" class="btn btn-outline-success btn-lg">Login</button> 
-        </a> 
-        <br>
-        <br><p>OR</p>
-        <br> 
-        <a href="/signup">
-            <button type="button" class="btn btn-outline-primary btn-lg" >Sign up</button>
-        </a>
-        
-    </div>
-</header>
+    <header>
+        <div class="title">
+            <h1>Matcha</h1>
+            <p>A DATING WEBSITE SPONSORED BY 42_PARIS</p><br>
+        </div>
+        <div class="select">
+            <a href="/login"><button type="button" class="btn btn-outline-success btn-lg">Login</button></a><br><br>
+            <a href="/login"><button type="button" class="btn btn-outline-success btn-lg">42Login</button></a><br><br>
+            <p>OR</p><br>
+            <a href="/signup"><button type="button" class="btn btn-outline-primary btn-lg">Register</button></a>
+        </div>
+    </header>
 <body>
-    
 <%- include('../includes/end.ejs') %>

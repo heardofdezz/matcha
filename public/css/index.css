@@ -1,30 +1,71 @@
 body {
-    background-image: url("/img/photo2.jpeg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: auto;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    padding: 0;
-    margin: 0;
-    font-family: 'Ultra', serif;
-  }
-
-  h1 {
-    /* font-family: 'Ultra', serif; */
-    font-size: 110px;
-    text-align: center;
-    text-shadow: beige;
-    color: #E5421F ;
-  }
-
-  p {
-      color: white;
-      text-align: center; 
+	top: 0px;
+	left: 0px;
+	width:100%;
+	height: 100%;
+	min-height: 530px;
+	background-image: url("../img/background.png");
+	background: no-repeat fixed;
+	background-size: 491% 100%;
+	animation: changebackground 40s infinite;
+	background-position: right top;
+	background-attachment: auto;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Ultra', serif;
 }
 
-.container {
-  text-align: center;
+.title {
+	text-align: center;
+}
+
+h1 {
+	display: inline-block;
+	width: 400px;
+	margin-top: 20px;
+	line-height: 100px;
+	font-size: 110px;
+	text-align: center;
+	text-shadow: beige;
+	color: white;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	border-bottom: 5px solid #bb3691;
+}
+
+p {
+	margin-top: 10px;
+	color: white;
+	text-align: center;
+	font-family: Gill Sans, sans-serif;
+}
+
+.select {
+	width: 500px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+@keyframes changebackground
+{
+	0%
+	{
+		background-image: url("../img/background.png");
+		background-position-x: 0%;
+	}
+	8%{background-position-x: 0%;}
+	16%{background-position-x: 29%;}
+	24%{background-position-x: 29%;}
+	32%{background-position-x: 62%;}
+	40%{background-position-x: 62%;}
+	48%{background-position-x: 95%;}
+	56%{background-position-x: 95%;}
+	64%{background-position-x: 62%;}
+	72%{background-position-x: 62%;}
+	80%{background-position-x: 29%;}
+	88%{background-position-x: 29%;}
+	100%
+	{
+		background-image: url("../img/background.png");
+		background-position-x: 0%;
+	}
 }

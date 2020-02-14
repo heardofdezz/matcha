@@ -1,26 +1,41 @@
-
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Matcha</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-             <a class="<%= path === '/user/swipe' ? 'active' : '' %>" href="/user/swipe"> <img src="/img/swipe.svg" alt="Swipe"> SWIPE </a>
-            </li>
-            <li class="nav-item">
-              <a class="<%= path === '/user/chat' ? 'active' : '' %>" href="/user/chat"><img src="/img/message-circle.svg" alt="Chat"> MESSAGES</a>
-            </li>
-            <li class="nav-item">
-                    <a class="<%= path === '/user/liked' ? 'active' : '' %>" href="/user/liked"><img src="/img/eye.svg" alt="Admirers"> ADMIRERS </a>
-            </li>
-            <li class="nav-item">
-                    <a class="<%= path === '/user/matched' ? 'active' : '' %>" href="/user/matched"><img src="/img/heart.svg" alt="Matched"> MATCHED</a>
-                  </li> 
-                  <li class="nav-item">
-                    <a class="<%= path === '/user/profile' ? 'active' : '' %>" href="/user/profile"><img src="/img/profile.svg" alt="Profile"> PROFILE</a>
-            </li>       
-          </ul>
-        </div>  
-      </nav>
+	<a class="navbar-brand" href="/user/profile">Matcha</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="<%= path === '/user/swipe/0' ? 'active' : '' %>" href="/user/swipe/0"><img src="/img/swipe.svg" alt="Swipe"> SWIPE</a>
+			</li>
+			<li class="nav-item">
+				<a class="<%= path === '/user/liked/0' ? 'active' : '' %>" href="/user/liked/0"><img src="/img/eye.svg" alt="Admirers"> ADMIRERS</a>
+			</li>
+			<li class="nav-item">
+				<a class="<%= path === '/user/matched/0' ? 'active' : '' %>" href="/user/matched/0"><img src="/img/heart.svg" alt="Matched"> MATCHED</a>
+			</li> 
+			<li class="nav-item">
+				<a class="<%= path === '/user/visits' ? 'active' : '' %>" href="/user/visits"><img id="loupe" src="/img/loupe.svg" alt="Visits"> VISITS</a>
+			</li>
+			<li class="nav-item">
+				<a class="<%= path === '/user/profile' ? 'active' : '' %>" href="/user/profile"><img src="/img/profile.svg" alt="Profile"> PROFILE</a>
+			</li>
+			<li class="nav-item">
+				<a class="<%= path === '/logout' ? 'active' : '' %>" href="/logout"><img src="/img/log-out.svg" alt="logout"> LOGOUT</a>
+			</li>
+			<div id="remove_notifs">
+				<a id="read-notifs">
+					<p style="width:250px;" id="rnotifs">Remove all notifications</p>
+				</a>
+				<div class="notifs">
+					<% for(var x=0; x<notifs.length; x++) { %>
+							<hr class="dropdown-divider">
+						<div class="cnotifs">
+							<b><%= notifs[x].username %></b> <%= notifs[x].text %><em>on <%= notifs[x].formattedDate %></em>
+						</div>
+					<% } %>
+				</div>
+			</div>
+		</ul>
+	</div>
+</nav>

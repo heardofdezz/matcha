@@ -1,0 +1,125 @@
+main {
+    padding: 1rem;
+    margin: auto;
+    align-content: center;
+    
+}
+
+.grid {
+    width: 400px;
+    margin: auto;
+}
+
+.user__title {
+    padding: 1rem;
+    margin: 20px;
+}
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.card__content {
+    border: 2px solid grey;
+    margin: 20px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.card__img {
+    margin: 0px 20px;
+}
+
+#img {
+    width: 100%;
+    border: 2px solid grey;
+}
+
+.card__header h1,
+.card__content h1,
+.card__content h2,
+.card__content p {
+    margin: 0px;
+}
+
+.user-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+    display: flex;
+}
+
+.user__title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.user__age {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.user_location .user__bio .user_interests {
+    text-align: center;
+}
+
+.pagination {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    border: 1px solid #E5421F;
+    margin: 0 1rem;
+}
+
+.pagination a:hover,
+.pagination a:active{
+    background: #E5421F;
+}
+
+.section_like {
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+.like, .dislike {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.like:hover {
+    background: lightgreen;
+}
+
+.dislike:hover {
+    background: #ef5959;
+}
+
+.thumbs {
+    display:block;
+    width: 40px;
+    margin: auto;
+}
+
+#filtres {
+	position: fixed;
+	left: 10%;
+}
+
+#infos_panel {
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#edit {
+    margin: 20px auto;
+    text-align: center;
+}
