@@ -24,7 +24,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.17.0",
     "faker": "^5.0.0",
-    "fs": "0.0.1-security",
+    "fs": "0.0.2",
     "geolib": "^3.2.1",
     "gmail-send": "^1.8.10",
     "hasha": "^5.1.0",
