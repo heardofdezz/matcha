@@ -14,7 +14,7 @@
     "nodemon": "2.0.20"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^2.0.0",
     "busboy": "^1.0.0",
     "connect-busboy": "1.0.0",
     "ejs": "^3.0.0",
